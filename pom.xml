@@ -23,5 +23,6 @@
         -->
         <module>exceptions</module>
         <module>async</module>
+        <module>mappers</module>
     </modules>
 </project>
