@@ -5,7 +5,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.dga.backend.portfolio.exceptions.api.dto.InputDto;
 import org.dga.backend.portfolio.exceptions.api.dto.OutputDto;
 import org.dga.backend.portfolio.exceptions.exception.internal.ExampleValidationException;
-import org.dga.backend.portfolio.exceptions.service.interfaz.IExampleService;
+import org.dga.backend.portfolio.exceptions.service.IExampleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

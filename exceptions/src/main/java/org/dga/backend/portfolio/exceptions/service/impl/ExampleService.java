@@ -1,6 +1,6 @@
-package org.dga.backend.portfolio.exceptions.service;
+package org.dga.backend.portfolio.exceptions.service.impl;
 
-import org.dga.backend.portfolio.exceptions.service.interfaz.IExampleService;
+import org.dga.backend.portfolio.exceptions.service.IExampleService;
 import org.dga.backend.portfolio.exceptions.service.model.ModelMapper1;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.QueryTimeoutException;

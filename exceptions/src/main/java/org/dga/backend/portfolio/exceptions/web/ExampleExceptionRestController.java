@@ -5,7 +5,7 @@ import org.dga.backend.portfolio.exceptions.api.dto.OutputDto;
 import org.dga.backend.portfolio.exceptions.api.dto.OutputMapperDto;
 import org.dga.backend.portfolio.exceptions.exception.ExampleExceptionRest;
 import org.dga.backend.portfolio.exceptions.mapper.MapperExample;
-import org.dga.backend.portfolio.exceptions.service.interfaz.IExampleService;
+import org.dga.backend.portfolio.exceptions.service.IExampleService;
 import org.dga.backend.portfolio.exceptions.service.model.ModelMapper1;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
