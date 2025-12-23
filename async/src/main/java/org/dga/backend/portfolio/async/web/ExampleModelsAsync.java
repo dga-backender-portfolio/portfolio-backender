@@ -1,9 +1,9 @@
-package org.dga.backend.portfolio.examples.web;
+package org.dga.backend.portfolio.async.web;
 
 import lombok.extern.slf4j.Slf4j;
-import org.dga.backend.portfolio.examples.api.dto.OutputDto;
-import org.dga.backend.portfolio.examples.service.interfaz.IExampleService;
-import org.dga.backend.portfolio.examples.service.runnable.ExampleRunnable;
+import org.dga.backend.portfolio.async.api.dto.OutputDto;
+import org.dga.backend.portfolio.async.service.interfaz.IExampleService;
+import org.dga.backend.portfolio.async.service.runnable.ExampleRunnable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;

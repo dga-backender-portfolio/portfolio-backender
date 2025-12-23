@@ -1,4 +1,4 @@
-package org.dga.backend.portfolio.examples;
+package org.dga.backend.portfolio.async;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;

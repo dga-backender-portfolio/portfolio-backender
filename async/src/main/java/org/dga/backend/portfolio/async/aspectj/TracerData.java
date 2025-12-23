@@ -1,4 +1,4 @@
-package org.dga.backend.portfolio.examples.aspectj;
+package org.dga.backend.portfolio.async.aspectj;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;

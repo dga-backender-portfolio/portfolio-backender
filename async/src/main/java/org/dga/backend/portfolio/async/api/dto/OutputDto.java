@@ -1,4 +1,4 @@
-package org.dga.backend.portfolio.examples.api.dto;
+package org.dga.backend.portfolio.async.api.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

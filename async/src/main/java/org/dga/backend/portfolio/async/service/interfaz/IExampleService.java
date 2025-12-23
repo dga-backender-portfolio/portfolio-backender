@@ -1,4 +1,4 @@
-package org.dga.backend.portfolio.examples.service.interfaz;
+package org.dga.backend.portfolio.async.service.interfaz;
 
 import java.util.List;
 

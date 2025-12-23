@@ -1,4 +1,4 @@
-package org.dga.backend.portfolio.examples.config;
+package org.dga.backend.portfolio.async.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

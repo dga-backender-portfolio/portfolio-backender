@@ -1,4 +1,4 @@
-package org.dga.backend.portfolio.examples.service.runnable;
+package org.dga.backend.portfolio.async.service.runnable;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
