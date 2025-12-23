@@ -22,5 +22,6 @@
         <module>examples</module>
         -->
         <module>exceptions</module>
+        <module>async</module>
     </modules>
 </project>
