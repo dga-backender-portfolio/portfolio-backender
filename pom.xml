@@ -24,5 +24,6 @@
         <module>exceptions</module>
         <module>async</module>
         <module>mappers</module>
+        <module>model-hierarchy-orm</module>
     </modules>
 </project>
