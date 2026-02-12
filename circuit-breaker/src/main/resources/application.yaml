@@ -1,0 +1,32 @@
+logging:
+  level:
+    io.github.resilience4j: DEBUG
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      requestExample: # Nombre de la instancia (el que usas en @CircuitBreaker)
+
+        # 1. Monitoreo
+        registerHealthIndicator: true # Expone el estado (OPEN/CLOSED) en el endpoint /actuator/health
+
+        # 2. Ventana Deslizante (Sliding Window)
+        slidingWindowSize: 10         # Cuántas llamadas analiza para decidir si abrir el circuito
+        slidingWindowType: COUNT_BASED # COUNT_BASED (analiza las últimas X llamadas) o TIME_BASED (segundos)
+
+        # 3. Umbrales de Fallo
+        minimumNumberOfCalls: 5       # Mínimo de llamadas necesarias antes de empezar a calcular el % de error
+        failureRateThreshold: 50      # Si el 50% o más de las llamadas fallan, el circuito se abre (OPEN)
+
+        # 4. Tiempos de espera - timeout
+        slowCallRateThreshold: 50      # Si el 50% son lentas, abre el circuito
+        slowCallDurationThreshold: 5s  # Se considera "lenta" si tarda más de 5 segundos
+
+        # 5. Estado Abierto (OPEN)
+        waitDurationInOpenState: 10s  # Cuánto tiempo espera en OPEN antes de pasar a HALF_OPEN
+
+        # 6. Estado Medio-Abierto (HALF_OPEN)
+        permittedNumberOfCallsInHalfOpenState: 3 # Cuántas llamadas satisfactorias, vuelven al estado CLOSED
+
+        # 7. Otros
+        eventConsumerBufferSize: 10   # Capacidad del buffer para eventos (logs/métricas del circuito)

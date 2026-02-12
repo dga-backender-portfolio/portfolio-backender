@@ -29,6 +29,7 @@
         <module>async</module>
         <module>mappers</module>
         <module>model-hierarchy-orm</module>
+        <module>circuit-breaker</module>
     </modules>
     <dependencies>
         <dependency>
