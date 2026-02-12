@@ -21,10 +21,9 @@ public class ExampleService implements IExampleService {
     private final WebClient webClient;
     private final CircuitBreakerRegistry registry; // Para consultar el estado real
 
-    // El nombre "backendProductos" debe existir en tu application.yml
+    // El nombre "requestExample" debe existir en tu application.yml
     @CircuitBreaker(name = "requestExample", fallbackMethod = "fallbackExampleWireMock")
     public Mono<InformationModel> getInformation(Integer id){
-        var circuitBreaker = registry.circuitBreaker("requestExample");
         return webClient.get()
                 // Esta ruta debe coincidir con el stubFor(urlMatching(...)) de tu WireMock
                 .uri("/api/request/id/{id}", id)
@@ -42,6 +41,8 @@ public class ExampleService implements IExampleService {
     // Método de rescate (Fallback)
     public Mono<InformationModel> fallbackExampleWireMock(Integer id, Throwable t) {
         io.github.resilience4j.circuitbreaker.CircuitBreaker circuitBreaker = registry.circuitBreaker("requestExample");
+        //evaluamos qué tipo de excepción, ya que si no es la que nosotros tratamos en el webClient, presuponemos que es
+        //el circuit breaker
         return switch(t){
             case ErrorGetInformationException e -> Mono.error(e);
             default -> Mono.error(new ErrorOpenCircuitBreakerException(
