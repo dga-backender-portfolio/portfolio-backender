@@ -30,6 +30,7 @@
         <module>mappers</module>
         <module>model-hierarchy-orm</module>
         <module>circuit-breaker</module>
+        <module>certificates</module>
     </modules>
     <dependencies>
         <dependency>

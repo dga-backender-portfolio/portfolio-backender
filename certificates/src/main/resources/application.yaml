@@ -1,0 +1,15 @@
+spring:
+  ssl:
+    bundle:
+      jks: # <--- Este nivel es obligatorio (puede ser jks, p12 o pem)
+        client-badssl: # <--- Este es el nombre que buscará el bundles.getBundle()
+          key:
+            alias: "1" # <--- el alias que tiene el certificado
+          keystore:
+            location: "classpath:badssl.com-client.p12"
+            password: "badssl.com"
+
+# Forzar a Netty a escupir todo lo relacionado con SSL
+#logging.level:
+#  io.netty.handler.ssl.SslHandler: DEBUG
+#  reactor.netty.tcp.SslProvider: DEBUG
